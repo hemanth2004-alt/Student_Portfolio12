@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <!-- Add this particle container -->
+        <div class="particles-container" id="particlesContainer"></div>
+        
+        <div class="splash-content">
+            <div class="splash-logo">
+                <i class="fas fa-code"></i>
+            </div>
+            <h1 class="splash-title">Sesetty Hemanth</h1>
+            <p class="splash-subtitle">Web Developer & Creative Problem Solver</p>
+            <div class="splash-instruction">
+                <p>Click anywhere to enter my portfolio</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 py-4 px-6 lg:px-12" style="background-color: #181929;">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+              <a href="#" class="text-2xl font-bold text-purple-700">SH</a>
+            <div class=" hidden md:flex space-x-8">
+                <a href="#home" class=" text-gray-400 hover:text-indigo-600 transition"><i class="fas fa-home"></i> Home</a>
+                <a href="#about" class=" text-gray-400 hover:text-indigo-600 transition"><i class="fas fa-user"></i> About</a>
+                <a href="#Portfolio" class=" text-gray-400 hover:text-indigo-600 transition"><i class="fas fa-palette"></i> Portfolio</a>
+                <a href="#contact" class="text-gray-400 hover:text-indigo-600 transition"><i class="fas fa-phone"></i> Contact</a>
+            </div>
+            <button class="md:hidden text-gray-700 mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile menu -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8">
+        <button class="absolute top-4 right-4 p-2">
+            <i class="fas fa-times text-2xl text-gray-700"></i>
+        </button>
+        <a href="#home" class="text-2xl text-gray-700 hover:text-purple-600 transition">Home</a>
+        <a href="#about" class="text-2xl text-gray-700 hover:text-purple-600 transition">About</a>
+        <a href="#Portfolio" class="text-2xl text-gray-700 hover:text-purple-600 transition">Portfolio</a>
+        <a href="#contact" class="text-2xl text-gray-700 hover:text-purple-600 transition">Contact</a>
+    </div>
+
+    
+     <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center overflow-hidden pt-16 hero relative">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        
+        <div class=" z-10 text-center px-6 py-16 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Welcome To My</h1>
+            <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"><span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">PortFolio Website</span></h2>
+            <div class="flex justify-center space-x-8">
+                <a href="#Portfolio" class="px-10 py-3 border-2 border-white text-white font-medium rounded-full hover:bg-white hover:text-purple-700 transition duration-300 transform hover:scale-105">
+                    View My Work
+                </a><br>
+               <button class="px-6 py-3 border-2 border-white text-white font-medium rounded-full hover:bg-white hover:text-purple-700 transition duration-300 transform hover:scale-105">
+                Download CV
+            </button>
+            </div>
+        </div>
+
+         <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <div class="mouse">
+                <span class="scroll-down"></span>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+   <section id="about" class="min-h-screen hero flex items-center justify-center ">
+            <div class="flex flex-col md:flex-row gap-12 animate-in delay-1">
+                <div class=" md:w-1/2 flex justify-center items-center">
+                <div style="border-radius: 60%; padding: 20px;  display: flex; align-items: center; justify-content: center;">
+                    <img 
+                        src="https://res.cloudinary.com/dlsn7z8dg/image/upload/v1754795273/IMG_20240414_193351_588_1_co11vv.jpg" 
+                        alt="Happy Dude Web Developer Hero Section" 
+                        class="profile-pic shadow-3xl"
+                        style="width: 390px; height: 500px; object-fit: cover; border-radius: 52% / 50%; border: 4px solid #18182a; box-shadow: 0 0 15px 6px #e1267a, 0 0 0 20px #ff5ccd inset;">
+                </div>
+                </div>
+                <div class="px-10 w-1/2 flex flex-col justify-center">
+                    <p class="text-white text-lg mb-4">Hello it's Me</p>
+                    <h1 class="text-5xl font-bold mb-2" ><span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">Sesetty Hemanth</span></h1><br>
+                    <h2 class="text-2xl font-bold text-gray-300 mb-2">Web Developer<span class="text-white"></span></h2>
+                    <p class="text-gray-400 mb-1">Passionate computer science student crafting digital experiences with modern technologies and creative problem-solving.</p>
+                      <div class=" grid grid-row-2 md:grid-cols-2 md:mb-0 md:pr-12 gap-6 mt-4 animate-in delay-1">
+                    <!-- Card 1 -->
+                    <div class="profile-pic p-2 rounded-lg shadow-md flex items-center gap-3  shadow-1xl border-1 border-gray-800 ">
+                        <div class="text-indigo-700 text-lg"style="color:blue;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-300 font-semibold text-lg mb-1">Clean Code</h3>
+                            <p class="text-gray-400">Writing maintainable and efficient code</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="profile-pic p-2 rounded-lg shadow-md flex items-center gap-3  shadow-1xl border-1 border-gray-800">
+                        <div class="text-indigo-700 text-lg"style="color:green;">
+                            <i class="fas fa-swatchbook"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-300 font-semibold text-lg mb-1">Design Focus</h3>
+                            <p class="text-gray-400">Creating beautiful user interfaces</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="profile-pic p-2 rounded-lg shadow-md flex items-center gap-3  shadow-1xl border-1 border-gray-800">
+                        <div class="text-indigo-700 text-lg"style="color:yellow;">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-300 font-semibold text-lg mb-1">Fast Learner</h3>
+                            <p class="text-gray-400">Quickly adapting to new technologies</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="profile-pic p-2 rounded-lg shadow-md flex items-center gap-3  shadow-xl border-1 border-gray-800">
+                        <div class="text-indigo-800 text-lg"style="color:red;">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-300 font-semibold text-lg mb-1">Passionate</h3>
+                            <p class="text-gray-400">Love for creating digital solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                </div>
+            </div>
+           
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Portfolio" class="py-20 relative ">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <h2 class="text-4xl font-bold text-center mb-4"><span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">Portfolio Showcase</span></h2>
+            <p class="text-center text-gray-300 mb-8">Explore My Journey through Projects, Certificates, And Technical Expertise. Each Section Represents a Milestone in My Continuous Learning Path</p>
+            <div class="tabs">
+                <button class="tab-btn active text-gray-800" data-tab="projects-tab"><i class=" fas fa-briefcase mr-2 "></i> Projects</button>
+                <button class="tab-btn text-gray-800" data-tab="certificates-tab"><i class=" fas fa-certificate mr-2"></i> Certificates</button>
+                <button class="tab-btn text-gray-800" data-tab="skills-tab"><i class=" fas fa-user-graduate mr-2"></i> Skills</button>
+            </div>
+
+            <!-- Projects Tab Content -->
+            <div id="projects-tab" class="tab-content active">
+                <br>
+                <!-- Project 1 -->
+                <div class="grid grid-rows-1 md:grid-cols-3 gap-8 animate-in delay-1 " id ="visible-projects">
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-4 transition-transform"style="background-color: white;">
+                    <div class="relative overflow-hidden group bg-gradient-to-b from-[#2d2250] to-[#181926] flex items-center justify-center h-60">
+                        <!-- E-Commerce Dashboard Icon -->
+                        <img src="https://res.cloudinary.com/dlsn7z8dg/image/upload/v1761497769/WhatsApp_Image_2025-10-26_at_22.19.41_067e8503_lepkwm.jpg" alt="E-Commerce Dashboard Icon" class="w-30 h-60" />
+                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-75 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <a href="#" class="text-white px-4 py-2 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-4 py-1 bg-purple-500 text-white text-xs rounded-full mb-4">In Progress</span>
+                        <h3 class="text-black font-bold mb-2">E-Commerce website</h3>
+                        <p class="text-black mb-4">Built a dynamic online shopping platform with smooth navigation, product catalog, and seamless user experience.</p>      
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition-transform"style="background-color: white;">
+                    <div class="relative overflow-hidden group bg-gradient-to-b from-[#2d2250] to-[#181926] flex items-center justify-center h-60">
+                        <!-- AI Chat Assistant Icon -->
+                        <img src="https://res.cloudinary.com/dlsn7z8dg/image/upload/v1755258904/Screenshot_2025-08-15_172011_xdqca9.png" alt="AI Chat Assistant Icon" class="w-30 h-50" />
+                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-75 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <a href="#" class="text-white px-4 py-2 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-4 py-1 bg-purple-500 text-white text-xs rounded-full mb-4">In Progress</span>
+                        <h3 class="text-black font-bold mb-2">AI Chat Assistant</h3>
+                        <p class="text-black mb-4">An intelligent chatbot powered by AI with natural language processing and contextual conversation capabilities.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition-transform"style="background-color: white;">
+                    <div class="relative overflow-hidden group bg-gradient-to-b from-[#2d2250] to-[#181926] flex items-center justify-center h-60">
+                        <!-- Portfolio Website Icon -->
+                        <img src="https://res.cloudinary.com/dlsn7z8dg/image/upload/v1755259915/Screenshot_2025-08-15_174133_zwbdn6.png" alt="Portfolio Website Icon" class="w-30 h-60" />
+                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-75 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <a href="#" class="text-white px-4 py-2 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-4 py-1 bg-indigo-600 text-white text-xs rounded-full mb-4">Completed</span>
+                            <h3 class="text-black font-bold mb-2">Portfolio Website</h3>
+                            <p class="text-black mb-4">A responsive portfolio website showcasing projects and skills with smooth animations and modern design...</p>
+                    </div>
+                </div>
+                
+                </div>
+                <br>
+                <br>
+                <div class="grid grid-rows-1 md:grid-cols-3 gap-8 animate-in delay-1 " id="hidden-projects">
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition-transform"style="background-color: white;">
+                    <div class="relative overflow-hidden group bg-gradient-to-b from-[#2d2250] to-[#181926] flex items-center justify-center h-60">
+                        <!-- Social Media App Icon -->
+                        <img src="https://res.cloudinary.com/dlsn7z8dg/image/upload/v1761498110/Screenshot_2025-10-26_223124_s0tlom.png" alt="Social Media App Icon" class="w-30 h-60" />
+                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-75 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <a href="#" class="text-white px-4 py-2 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6 ">
+                        <span class="inline-block px-4 py-1 bg-purple-500 text-white text-xs rounded-full mb-4">In Progress</span>
+                        <h3 class="text-black font-bold mb-2">Quiz Game</h3>
+                        <p class="text-black mb-4">Developed an interactive programming quiz game. Designed a fun interface to help users improve coding skills.</p>
+                    </div>
+                </div>
+                <!-- Project 5 --> 
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition-transform"style="background-color: white;">
+                    <div class="relative overflow-hidden group bg-gradient-to-b from-[#2d2250] to-[#181926] flex items-center justify-center h-60">
+                        <!-- Social Media App Icon -->
+                        <img src="https://res.cloudinary.com/dlsn7z8dg/image/upload/v1761496681/Screenshot_2025-10-26_220627_ohf3zl.png" alt="Social Media App Icon" class="w-30 h-55" />
+                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-75 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <a href="#" class="text-white px-4 py-2 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6 ">
+                        <span class="inline-block px-4 py-1 bg-purple-500 text-white text-xs rounded-full mb-4">In Progress</span>
+                        <h3 class="text-black font-bold mb-2">FlashLearn Hub</h3>
+                        <p class="text-black mb-4">Developed FlashLearn, an interactive platform with flashcards. Designed a user-friendly interface for learning.</p>
+                    </div>
+                </div> 
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition-transform"style="background-color: white;">
+                    <div class="relative overflow-hidden group bg-gradient-to-b from-[#2d2250] to-[#181926] flex items-center justify-center h-60">
+                        <!-- Social Media App Icon -->
+                        <img src="https://res.cloudinary.com/dlsn7z8dg/image/upload/v1755258905/Screenshot_2025-08-15_172335_iiiawy.png" alt="Social Media App Icon" class="w-30 h-50" />
+                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-75 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <a href="#" class="text-white px-4 py-2 bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6 ">
+                        <span class="inline-block px-4 py-1 bg-purple-500 text-white text-xs rounded-full mb-4">In Progress</span>
+                        <h3 class="text-black font-bold mb-2">Social Media App</h3>
+                        <p class="text-black mb-4">A modern social platform with real-time messaging, post sharing, and interactive features built with cutting-edge...</p>   
+                    </div>
+                </div> 
+            </div>
+                <!-- Add more projects as needed -->
+                <br>
+                <div class="text-center mt-12 animate-in delay-2">
+                    <button id="toggle-projects" class="px-6 py-3 bg-indigo-500 text-white rounded-lg inline-block hover:bg-indigo-600 transition transform hover:scale-105">
+                        <i class="fas fa-eye mr-2"></i>Show More Projects
+                    </button>
+                </div>
+            </div>
+
+            <!-- Certificates Tab Content -->
+            <div id="certificates-tab" class="tab-content hidden ">
+                <div class="project-slider relative overflow-slider ">
+                <div class="flex justify-center">
+                <div class=" rounded-2xl p-6 flex flex-col items-center">
+                    <img src="https://i.ibb.co/6w2yQ7c/certificate-sample.png" alt="Certificate 1" class=" rounded-xl text-1/2 mb-4" style="max-width: 350px;">
+                    <h3 class="text-center font-bold text-gray-300 mb-3">Certificate 1</h3>
+                    <p class=" text-gray-400 text-center">Awarded for successful completion of a technical course.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                <div class=" rounded-2xl p-6 flex flex-col items-center">
+                    <img src="https://i.ibb.co/6w2yQ7c/certificate-sample.png" alt="Certificate 1" class=" rounded-xl text-1/2 mb-4" style="max-width: 350px;">
+                    <h3 class="text-center font-bold text-gray-300 mb-3">Certificate 2</h3>
+                    <p class=" text-gray-400 text-center">Awarded for successful completion of a technical course.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                <div class=" rounded-2xl p-6 flex flex-col items-center">
+                    <img src="https://i.ibb.co/6w2yQ7c/certificate-sample.png" alt="Certificate 1" class=" rounded-xl text-1/2 mb-4" style="max-width: 350px;">
+                    <h3 class="text-center font-bold text-gray-300 mb-3">Certificate 3</h3>
+                    <p class=" text-gray-400 text-center">Awarded for successful completion of a technical course.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                <div class=" rounded-2xl p-6 flex flex-col items-center">
+                    <img src="https://i.ibb.co/6w2yQ7c/certificate-sample.png" alt="Certificate 1" class=" rounded-xl text-1/2 mb-4" style="max-width: 350px;">
+                    <h3 class="text-center font-bold text-gray-300 mb-3">Certificate 4</h3>
+                    <p class=" text-gray-400 text-center">Awarded for successful completion of a technical course.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                <div class="  rounded-2xl p-6 flex flex-col items-center">
+                    <img src="https://i.ibb.co/6w2yQ7c/certificate-sample.png" alt="Certificate 1" class=" rounded-xl text-1/2 mb-4" style="max-width: 350px;">
+                    <h3 class="text-center font-bold text-gray-300 mb-3">Certificate 5</h3>
+                    <p class=" text-gray-400 text-center">Awarded for successful completion of a technical course.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                <div class="rounded-2xl p-6 flex flex-col items-center">
+                    <img src="https://i.ibb.co/6w2yQ7c/certificate-sample.png" alt="Certificate 1" class=" rounded-xl text-1/2 mb-4" style="max-width: 350px;">
+                    <h3 class="text-center font-bold text-gray-300 mb-3">Certificate 6</h3>
+                    <p class=" text-gray-400 text-center">Awarded for successful completion of a technical course.</p>
+                    </div>
+                </div>
+
+                <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300  z-30">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300  z-30">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+             <!-- Add more certificates as needed -->
+            </div>
+            <div class="flex justify-center mt-10 space-x-2">
+                    <button class="project-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 active" data-slide="0"></button>
+                    <button class="project-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 " data-slide="1"></button>
+                    <button class="project-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 " data-slide="2"></button>
+                    <button class="project-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 " data-slide="3"></button>
+                    <button class="project-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 " data-slide="4"></button>
+                    <button class="project-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 " data-slide="5"></button>
+            </div>
+            </div>
+            <br>
+            <!-- Skills Tab Content -->
+            <div id="skills-tab" class="tab-content hidden">
+                <div  class=" flex flex-wrap justify-center gap-6 mb-12">
+                <div class="profile-pic flex flex-col items-center ">
+                    <div class="rounded-full bg-[#23243a] p-4 mb-2" >
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" style="width:48px;height:48px;">
+                    </div>
+                    <span class="text-gray-200 font-semibold">WordPress</span>
+                </div>
+                <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="SQL" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">React</span>
+                    </div>
+                    <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="java" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">java</span>
+                    </div>
+                    <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">Python</span>
+                    </div>
+                    <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2" >
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" alt="Firebase" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">Firebase</span>
+                    </div>
+                    <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">HTML</span>
+                    </div>
+                    <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2" >
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">CSS</span>
+                    </div>
+                    <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">JavaScript</span>
+                    </div>
+                    <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2" >
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="HTML" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">FlutterFlow</span>
+                    </div>
+                    <div class="profile-pic flex flex-col items-center">
+                        <div class="rounded-full bg-[#23243a] p-4 mb-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="HTML" style="width:48px;height:48px;">
+                        </div>
+                        <span class="text-gray-200 font-semibold">C</span>
+                    </div>
+                    </div>
+                    <!-- Frontend Development Card -->
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-8 lg:px-13">
+                    <div class="profile-pic shadow-2xl p-8 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient-to-tr from-blue-500 to-purple-500 text-white rounded-full p-4 mr-4 text-3xl">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="text-gray-300 text-2xl font-bold">Frontend Development</h3>
+                        </div>
+                        <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-200">HTML</span>
+                            <span class="text-gray-200">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-200">Css</span>
+                            <span class="text-gray-200">80%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-2.5 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-200">JavaScript</span>
+                            <span class="text-gray-200">70%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-2.5 rounded-full" style="width: 80%"></div>
+                        </div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-200">React</span>
+                            <span class="text-gray-200">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Backend Development Card -->
+                    <div class="profile-pic shadow-2xl p-8 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient-to-tr from-purple-500 to-pink-500 text-white rounded-full p-4 mr-4 text-3xl">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="text-gray-300 text-2xl font-bold">Backend Development</h3>
+                        </div>
+                        <div class="mb-4">
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Python</span>
+                <span class="text-gray-200">80%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 80%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">MySQL</span>
+                <span class="text-gray-200">85%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 85%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Cloud</span>
+                <span class="text-gray-200">70%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 70%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">XML</span>
+                <span class="text-gray-200">77%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 77%"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+         <br>
+         <br>
+         <!-- Design & UI/UX Card -->
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-8 lg:px-13">
+    <div class="profile-pic shadow-2xl p-8 rounded-xl shadow-lg">
+        <div class="flex items-center mb-6">
+            <div class="bg-gradient-to-tr bg-cyan-500 text-white rounded-full p-4 mr-4 text-3xl">
+                <i class="fas fa-palette"></i>
+            </div>
+            <h3 class="text-gray-300 text-2xl font-bold">Design & Soft Skills</h3>
+        </div>
+        <div class="mb-4">
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Problem Solving</span>
+                <span class="text-gray-200">90%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2.5 rounded-full" style="width: 90%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Teamwork</span>
+                <span class="text-gray-200">80%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2.5 rounded-full" style="width: 80%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Communication</span>
+                <span class="text-gray-200">85%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2.5 rounded-full" style="width: 85%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Critical thinking</span>
+                <span class="text-gray-200">77%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2.5 rounded-full" style="width: 77%"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Tools & Others Card -->
+    <div class="profile-pic shadow-2xl p-8 rounded-xl shadow-lg">
+        <div class="flex items-center mb-6">
+            <div class="bg-gradient-to-tr bg-orange-500 text-white rounded-full p-4 mr-4 text-3xl">
+                <i class="fas fa-gear"></i>
+            </div>
+            <h3 class="text-gray-300 text-2xl font-bold">Tools & Others</h3>
+        </div>
+        <div class="mb-4">
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Git & GitHub</span>
+                <span class="text-gray-200">90%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-orange-400 to-pink-500 h-2.5 rounded-full" style="width: 90%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Linux</span>
+                <span class="text-gray-200">78%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-orange-400 to-pink-500 h-2.5 rounded-full" style="width: 78%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">Visual Studio Code</span>
+                <span class="text-gray-200">95%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-orange-400 to-pink-500 h-2.5 rounded-full" style="width: 95%"></div>
+            </div>
+            <div class="flex justify-between mb-1">
+                <span class="text-gray-200">AutoCAD</span>
+                <span class="text-gray-200">85%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-orange-400 to-pink-500 h-2.5 rounded-full" style="width: 85%"></div>
+            </div>
+        </div>
+    </div>
+    </div>         
+        <!-- Add more skills as needed -->
+             </div>
+            </div>
+    </section>
+        <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-gray-50 "style = "background-color: #181926;">
+        <div class="max-w-6xl mx-auto px-10 lg:px-12">
+            <h2 class="text-3xl font-bold text-center mb-12 animate-in"><span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">Get In Touch</span></h2>
+             <p class=" font-normal text-white mb-6 animate-in">I'm always open to discussing new opportunities, creative projects, or just having a chat about technology and design.</p>
+            <div class="flex flex-col md:flex-row gap-12 flex flex-col justify-left ">
+                <div class = "md:w-1/2 ">
+                    <div class="shadow-2xl border-1 border-gray-900 p-8 h-full">
+                    
+                       
+                        <div class="space-y-4">
+                        <!-- Email Card -->
+                        <div class="profile-pic shadow-1xl border-2 border-gray-700 flex items-center rounded-lg p-4 shadow text-base">
+                            <div class="bg-purple  bg-opacity-20 text-purple-700 rounded-full p-2 mr-4 text-lg">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-bold font-bold text-gray-400 mb-1">Email</h4>
+                                <p class="text-gray-700 text-white">sesettyhemanth74@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- Phone Card -->
+                        <div class="profile-pic shadow-1xl border-2 border-gray-700 flex items-center rounded-lg p-4 shadow text-base">
+                            <div class="bg-purple bg-opacity-20 text-purple-700 rounded-full p-2 mr-4 text-lg">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-bold font-semibold text-gray-400 mb-1">Phone</h4>
+                                <p class="text-gray text-white">9346539195</p>
+                            </div>
+                        </div>
+                        <!-- Location Card -->
+                        <div class="profile-pic shadow-1xl border-2 border-gray-700 flex items-center rounded-lg p-4 shadow text-base">
+                            <div class="bg-purple bg-opacity-20 text-purple-700 rounded-full p-2 mr-4 text-lg">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-bold font-bold text-gray-400 mb-1">Location</h4>
+                                <p class="text-gray text-white">Visakhapatnam , Andhra Pradesh</p>
+                            </div>
+                        </div>
+                        </div>             
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-300 mb-4">Follow me on social media</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="social-icon text-white hover:text-indigo-800 text-xl"style="filter: drop-shadow(0 0 10px #ff5ccd);">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-icon text-white hover:text-indigo-800 text-xl"style="filter: drop-shadow(0 0 10px #ff5ccd);">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-icon text-white hover:text-indigo-800 text-xl"style="filter: drop-shadow(0 0 10px #ff5ccd);">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon text-white hover:text-indigo-800 text-xl"style="filter: drop-shadow(0 0 10px #ff5ccd);">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" md:w-1/2 flex justify-center items-center">
+                    <div class = "rotating-image">
+                    <img 
+                        src="https://res.cloudinary.com/dlsn7z8dg/image/upload/v1755193102/Screenshot_2025-08-12_194508_eqynsh.png" 
+                        alt="logo" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-indigo-400">sesetty hemanth</a>
+                    <p class="mt-2 text-gray-400">Building digital experiences with passion and creativity. Let's create something amazing together.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon text-gray-400 hover:text-white">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>© 2025 | Website made with <span aria-label="heart" role="img" class="text-red-500">❤</span> and code</p>
+            <p>Designed with <span aria-label="smiley face" role="img">😊</span> and <span aria-label="laptop computer" role="img">💻</span></p>
+            <p> Still debugging tho! <span aria-label="wrench" role="img">🔧</span>
+            </p>
+            <p>Made with <span aria-label="laptop computer" role="img">💻</span> by Hemanth</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+     <a href="#home" class="fixed bottom-10 right-10 bg-indigo-600 text-white w-35 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-in delay-3 opacity-0" id="back-to-top"style="background-color: #181929;">
+        <i class="px-3 py-3 fas fa-arrow-up"></i>
+        <span class="px-3 py-3">Back to Top</span>
+    </a>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    </body>
+</html>
